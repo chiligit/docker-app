@@ -17,4 +17,4 @@ RUN cd docker-app; ls; mvn package
 VOLUME ["/opt/docker-app"]
 EXPOSE 8080
 
-RUN cd docker-app; java -jar target/docker-app-1.0-SNAPSHOT.jar
+ENTRYPOINT ["java", "-jar", "/opt/docker-app/target/docker-app-1.0-SNAPSHOT.jar"]
